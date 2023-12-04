@@ -1,0 +1,40 @@
+    .box {
+        display: flex;
+        align-items: center;
+        margin-left: 15.75cm;
+        margin-bottom: 10px;
+    }
+
+    .input,
+    .select {
+        padding: 8px;
+        margin-right: 5px; /* Ajout d'un petit espace entre les champs */
+        background: none;
+        border: 2px solid #c5a47e;
+        border-radius: 50px;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px; 
+        color: #c5a47e;
+        outline: none;
+        padding-left: 20px;
+    }
+
+    .input::placeholder,
+    .select option {
+        color: #c5a47e;
+    }
+
+    .box i,
+    .box select {
+        margin-left: 5px;
+        color: #c5a47e;
+    }
+
+    .box select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: none;
+        cursor: pointer;
+    }
