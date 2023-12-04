@@ -1,6 +1,6 @@
 <?php
-require_once ('C:\xampp\htdocs\gestion produit\config.php');
-include('C:\xampp\htdocs\gestion produit\model\Categorie.php');
+require_once ('C:\xampp\htdocs\gestion produit metiers\config.php');
+include('C:\xampp\htdocs\gestion produit metiers\model\Categorie.php');
 
 class CategorieC{
 public function afficherCategorie()

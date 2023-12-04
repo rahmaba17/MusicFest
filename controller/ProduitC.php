@@ -1,6 +1,6 @@
 <?php
-require_once ('C:\xampp\htdocs\gestion produit\config.php');
-include('C:\xampp\htdocs\gestion produit\model\Produit.php');
+require_once ('C:\xampp\htdocs\gestion produit metiers\config.php');
+include('C:\xampp\htdocs\gestion produit metiers\model\Produit.php');
 
 class ProduitC{
 public function afficherProduit()
@@ -75,5 +75,28 @@ public function modifierProduit($id,$produit){
         $e->getMessage();
 }
 }
+public function paginationLIMIT($sql)
+{
+        $db = config::getConnexion();
+        try {
+            $liste = $db->query($sql);
+            return $liste;
+        } catch (Exception $e) {
+            die('Error:' . $e->getMessage());
+        }
+}  
+
+public function paginationCOUNTER($sql)
+{
+    $db = config::getConnexion();
+    try {
+        $liste = $db->query($sql);
+        $row=$liste->fetch(PDO::FETCH_NUM);
+        $total=$row[0];
+        return $total;
+    } catch (Exception $e) {
+        die('Error:' . $e->getMessage());
+    }
+} 
 }
 ?>
